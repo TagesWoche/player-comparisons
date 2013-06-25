@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<title>TagesWoche – Spielervergleich</title>
+          
+</head>
+<body>
+<div id="wrapper">
+<h2>Spielervergleich</h2>
+
+
+	<form id="searchform">
+		<select id="player1">
+			<option value="Streller">Streller</option>
+			<option value="F_Frei">Fabian Frei</option>
+		</select>
+	
+		<select id="player2">
+			<option value="Salah">Salah</option>
+			<option value="Elneny" selected>Elneny</option>
+			
+		</select>
+		
+		<input type="submit" value="Vergleichen" class="button">
+	</form>
+
+	<div id="error"></div>
+	
+
+		<div class="scorecard player1"><iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=Stocker" width="330" height="620"></iframe></div>
+		
+		<div class="scorecard player2"><iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=Sommer" width="350" height="620"></iframe></div>
+
+
+
+</div> <!-- wrapper -->
+</body>
+</html>
