@@ -1,7 +1,5 @@
-$(function() {
+$(document).ready(function() {$('.change').on('change', function(e) {
 	
-	
-	$('#searchform').submit(function(e) {
 		// Stop the form from sending and reloading the page
 		e.preventDefault();
 		$('#error').html("");
@@ -9,9 +7,10 @@ $(function() {
 		// Find the players
 		var player1 = findPlayers(1);
 		var player2 = findPlayers(2);
+		console.log(player1,player2);
 		generateScorecard(player1,player2);		
 	});
-});
+	});
 
 
 
@@ -33,10 +32,7 @@ function findPlayers(num) {
 
 // generate scorecards
 function generateScorecard(player1,player2) {
-	$('.player1').html('<iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=' + player1 + '" width="330" height="620"></iframe>');
-	$('.player2').html('<iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=' + player2 + '" width="330" height="620"></iframe>');
-	
-}
-l?spieler=' + player2 + '" width="330" height="620"></iframe>');
+	$('.player1').html('<iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=' + player1 + '" width="330" height="620" frameborder="0"></iframe>');
+	$('.player2').html('<iframe src="http://labs.tageswoche.ch/scorecards/scorecard.html?spieler=' + player2 + '" width="330" height="620" frameborder="0"></iframe>');
 	
 }
